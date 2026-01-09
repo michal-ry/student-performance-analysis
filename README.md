@@ -1,60 +1,60 @@
-\# Parents' Circle of Influence
+# Parents' Circle of Influence
 
 
 
-\## 1. Project Overview
+## 1. Project Overview
 
 
 
-\*\*Goal:\*\* To identify which parental factors fall within the "Circle of Influence" and may influence their children's school performance.
+**Goal:** To identify which parental factors fall within the "Circle of Influence" and may influence their children's school performance.
 
 
 
-\*\*Context:\*\* The Circle of Influence, introduced by Stephen Covey (\*7 Habits of Highly Effective People\*), focuses on factors fully under one's control. By isolating these variables within the dataset, this analysis aims to highlight actionable areas where parents can have a direct and meaningful impact on their child's learning outcomes.
+**Context:** The Circle of Influence, introduced by Stephen Covey (*7 Habits of Highly Effective People*), focuses on factors fully under one's control. By isolating these variables within the dataset, this analysis aims to highlight actionable areas where parents can have a direct and meaningful impact on their child's learning outcomes.
 
 
 
-\## 2. Dataset Description
+## 2. Dataset Description
 
 
 
-\- \*\*Name:\*\* Student Alcohol Consumption
+\- **Name:** Student Alcohol Consumption
 
-\- \*\*Source\*\*: \[Kaggle – Student Alcohol Consumption](https://www.kaggle.com/datasets/uciml/student-alcohol-consumption)
+\- **Source**: [Kaggle – Student Alcohol Consumption](https://www.kaggle.com/datasets/uciml/student-alcohol-consumption)
 
-\- \*\*Size:\*\* 395 rows, 33 columns
-
-
-
-\## Key Variable Analyzed
+\- **Size:** 395 rows, 33 columns
 
 
 
-\*\*Student grades\*\*
+## Key Variable Analyzed
 
 
 
-\- \*\*G1, G2:\*\* period grades
-
-\- \*\*G3:\*\* final grade
+**Student grades**
 
 
 
-\*\*Student information\*\*
+\- **G1, G2:** period grades
+
+\- **G3:** final grade
 
 
 
-\- \*\*sex:\*\* gender
-
-\- \*\*address:\*\* urban or rural
-
-\- \*\*romantic:\*\* relationship status
-
-\- \*\*studytime\*\*: weekly study time
+**Student information**
 
 
 
-\*\*Circle of Influence\*\*
+\- **sex:** gender
+
+\- **address:** urban or rural
+
+\- **romantic:** relationship status
+
+\- **studytime**: weekly study time
+
+
+
+**Circle of Influence**
 
 
 
@@ -62,41 +62,41 @@ These variables were selected because they represent factors fully controlled by
 
 
 
-\- \*\*guardian\*\*: student's guardian (mother/father/other)
+\- **guardian**: student's guardian (mother/father/other)
 
-\- \*\*famsup\*\*: family educational support
+\- **famsup**: family educational support
 
-\- \*\*paid\*\*: extra paid classes
+\- **paid**: extra paid classes
 
-\- \*\*activities\*\*: extra-curricular activities
+\- **activities**: extra-curricular activities
 
-\- \*\*nursery\*\*: attended nursery school
+\- **nursery**: attended nursery school
 
-\- \*\*internet\*\*: Internet access at home
-
-
-
-\## 3. Tools \& Technologies
+\- **internet**: Internet access at home
 
 
 
-\*\*Language:\*\* Python (3.11.5)
+## 3. Tools \& Technologies
 
 
 
-\*\*Libraries:\*\* Pandas, NumPy, Matplotlib
+**Language:** Python (3.11.5)
 
 
 
-\*\*Environment:\*\* Jupyter Notebook
+**Libraries:** Pandas, NumPy, Matplotlib
 
 
 
-\## 4. Key Goals \& Insight
+**Environment:** Jupyter Notebook
 
 
 
-\*\*Project Goals\*\*
+## 4. Key Goals \& Insight
+
+
+
+**Project Goals**
 
 
 
@@ -108,27 +108,27 @@ These variables were selected because they represent factors fully controlled by
 
 
 
-\*\*Key Insight \& Findings\*\*
+**Key Insight \& Findings**
 
 
 
-\- \*\*Nursery Attendance:\*\* Students who attended nursery show higher average grades compared to those who didn't.
+\- **Nursery Attendance:** Students who attended nursery show higher average grades compared to those who didn't.
 
-\- \*\*Internet Access:\*\* Internet access at home is associated with higher performance.
+\- **Internet Access:** Internet access at home is associated with higher performance.
 
-\- \*\*Extracurricular Activities:\*\* both paid classes and extra activities show a positive trend toward higher grades.
+\- **Extracurricular Activities:** both paid classes and extra activities show a positive trend toward higher grades.
 
-\- \*\*Family Support\*\*: Students who report receiving additional family support show lower average grades.
+\- **Family Support**: Students who report receiving additional family support show lower average grades.
 
 \- Guardian Type: Students whose guardian is neither mother nor father score lower than those under parental guardianship.
 
 
 
-\## 5. Methodology \& Analysis Process
+## 5. Methodology \& Analysis Process
 
 
 
-\*\*5.1 Data Cleaning and Preparation\*\*
+**5.1 Data Cleaning and Preparation**
 
 
 
@@ -146,11 +146,11 @@ This included:
 
 
 
-\*\*Result:\*\* The dataset contained \*\*no\*\* duplicates and no missing values, so no additional cleaning steps were required at this stage.
+**Result:** The dataset contained **no** duplicates and no missing values, so no additional cleaning steps were required at this stage.
 
 
 
-\*\*5.2 Feature Engineering \& Transformation\*\*
+**5.2 Feature Engineering \& Transformation**
 
 
 
@@ -158,7 +158,7 @@ To prepare the dataset for statistical analysis and correlation testing, the fol
 
 
 
-\*\*Column name formatting:\*\*
+**Column name formatting:**
 
 
 
@@ -166,7 +166,7 @@ All column names were converted to lowercase, stripped of extra spaces, and form
 
 
 
-\*\*Feature grouping:\*\*
+**Feature grouping:**
 
 
 
@@ -174,23 +174,23 @@ All features were grouped into logical segments (Circle of Influence, Family \& 
 
 
 
-\*\*Guardian variable encoding:\*\*
+**Guardian variable encoding:**
 
 
 
-The original \*'guardian'\* column contained three categories (mother, father, other) and was therefore unsuitable for correlation. It was transformed into three dummy variables, which were added to the dataset, and the original column was removed from the COI group.
+The original *'guardian'* column contained three categories (mother, father, other) and was therefore unsuitable for correlation. It was transformed into three dummy variables, which were added to the dataset, and the original column was removed from the COI group.
 
 
 
-\*\*Target DataFrame for ML analysis:\*\*
+**Target DataFrame for ML analysis:**
 
 
 
-A separate copy of the dataset \*(df\_ml)\* was created for numeric processing and correlation analysis.
+A separate copy of the dataset *(df\_ml)* was created for numeric processing and correlation analysis.
 
 
 
-\*\*Binary variable conversion:\*\*
+**Binary variable conversion:**
 
 
 
@@ -198,7 +198,7 @@ All yes/no variables in the COI group were mapped to numeric values (1/0) to ens
 
 
 
-\*\*5.3 Distribution of Final Grades (G3)\*\*
+**5.3 Distribution of Final Grades (G3)**
 
 
 
@@ -206,23 +206,23 @@ To understand the overall performance of students, descriptive statistics were c
 
 
 
-\*\*Descriptive Statistics:\*\*
+**Descriptive Statistics:**
 
 
 
-\*\*Mean:\*\* 10.42 | \*\*Median:\*\* 11.0 - Indicates a balanced, near-normal distribution
+**Mean:** 10.42 | **Median:** 11.0 - Indicates a balanced, near-normal distribution
 
 
 
-\*\*Spread:\*\* Standard Deviation of 4.58 highlights a significant performance gap.
+**Spread:** Standard Deviation of 4.58 highlights a significant performance gap.
 
 
 
-\*\*Range:\*\* 0 to 20.
+**Range:** 0 to 20.
 
 
 
-\*\*Outliers:\*\*
+**Outliers:**
 
 
 
@@ -230,7 +230,7 @@ A noticeable cluster of students scored '0'. These values were kept, as failing 
 
 
 
-\*\*Visualization:\*\*
+**Visualization:**
 
 
 
@@ -248,7 +248,7 @@ A histogram of the final grades shows:
 
 
 
-\*\*5.4 Circle of Influence Analysis\*\*
+**5.4 Circle of Influence Analysis**
 
 
 
@@ -256,129 +256,129 @@ This section examines individual parental factors to see how strongly they relat
 
 
 
-\*\*Nursery Attendance (Early Education):\*\*
+**Nursery Attendance (Early Education):**
 
 
 
 \- !\[Average Grade by Nursery Attendance](charts/nursery.png)
 
-\- \*\*Correlation with 'G3':\*\* \*\*0.05\*\* (Very Weak Positive).
+\- **Correlation with 'G3':** **0.05** (Very Weak Positive).
 
-\- \*\*Mean difference (yes-no):\*\* \*\*+0.59\*\* points
+\- **Mean difference (yes-no):** **+0.59** points
 
-\- \*\*Insight:\*\* While there is a positive link, early childhood education has a minimal direct impact on high school performance compared to current factors.
+\- **Insight:** While there is a positive link, early childhood education has a minimal direct impact on high school performance compared to current factors.
 
 
 
-\*\*Internet Access (Home Resources)\*\*:
+**Internet Access (Home Resources)**:
 
 
 
 \- !\[Average Grade by Internet Access](charts/internet.png)
 
-\- \*\*Correlation with 'G3':\*\* \*\*0.10\*\* (Very Weak Positive)
+\- **Correlation with 'G3':** **0.10** (Very Weak Positive)
 
-\- \*\*Mean Difference (yes – no):\*\* \*\*+1.21\*\* points
+\- **Mean Difference (yes – no):** **+1.21** points
 
-\- \*\*Insight:\*\* Internet access appears to support better learning conditions, likely by improving access to study materials, research, and homework tools.
+\- **Insight:** Internet access appears to support better learning conditions, likely by improving access to study materials, research, and homework tools.
 
 
 
-\*\*Activities (Extra-Curricular Engagement)\*\*
+**Activities (Extra-Curricular Engagement)**
 
 
 
 \- !\[Average Grade by Extra Activities](charts/activities.png)
 
-\- \*\*Correlation with 'G3':\*\* \*\*0.02\*\* \*(Very Weak Positive)\*
+\- **Correlation with 'G3':** **0.02** *(Very Weak Positive)*
 
-\- \*\*Mean Difference (yes – no): +0.02\*\* points
+\- **Mean Difference (yes – no): +0.02** points
 
-\- \*\*Insight:\*\* The effect is negligible. While activities may provide developmental benefits, they show almost no measurable impact on academic performance in this dataset.
+\- **Insight:** The effect is negligible. While activities may provide developmental benefits, they show almost no measurable impact on academic performance in this dataset.
 
 
 
-\*\*Paid Classes (Extra Lessons):\*\*
+**Paid Classes (Extra Lessons):**
 
 
 
 \- !\[Average Grade by Paid Classes](charts/paid.png)
 
-\- \*\*Correlation with G3:\*\* \*\*0.10\*\* (Very weak positive)
+\- **Correlation with G3:** **0.10** (Very weak positive)
 
-\- \*\*Mean Difference (yes-no):\*\* \*\*+0.93\*\* points
+\- **Mean Difference (yes-no):** **+0.93** points
 
-\- \*\*Insight:\*\* Paid classes show a small but clearer positive association with final grades compared to other COI factors. While the effect is not strong, structured additional lessons appear to support slightly better performance.
+\- **Insight:** Paid classes show a small but clearer positive association with final grades compared to other COI factors. While the effect is not strong, structured additional lessons appear to support slightly better performance.
 
 
 
-\*\*Family Support\*\*:
+**Family Support**:
 
 
 
 \- !\[Average Grade by Family Support](charts/famsup.png)
 
-\- \*\*Correlation with G3:\*\* \*\*–0.04\*\* (Very Weak Negative)
+\- **Correlation with G3:** **–0.04** (Very Weak Negative)
 
-\- \*\*Mean Difference (yes-no):\*\* \*\*-0.37\*\* points
+\- **Mean Difference (yes-no):** **-0.37** points
 
-\- \*\*Insight:\*\* The effect is minimal and statistically weak. Family support — as defined in the dataset — does \*\*not\*\* show a meaningful positive influence on final grades.
+\- **Insight:** The effect is minimal and statistically weak. Family support — as defined in the dataset — does **not** show a meaningful positive influence on final grades.
 
 
 
-\*\*Guardians:\*\*
+**Guardians:**
 
 
 
 \- !\[Average Grade by Guardian Type](charts/guardians.png)
 
-\- \*\*Correlation with G3:\*\*
+\- **Correlation with G3:**
 
 &nbsp;   
 
-&nbsp;   \*\*Mother:\*\* \*\*0.02\*\* (Very Weak Positive)
+&nbsp;   **Mother:** **0.02** (Very Weak Positive)
 
 &nbsp;   
 
-&nbsp;   \*\*Father:\*\* \*\*0.03\*\* (Very Weak Positive)
+&nbsp;   **Father:** **0.03** (Very Weak Positive)
 
 &nbsp;   
 
-&nbsp;   \*\*Other:\*\* \*\*-0.09\*\* (Very Weak Positive)
+&nbsp;   **Other:** **-0.09** (Very Weak Positive)
 
 &nbsp;   
 
-\- \*\*Mean Difference (yes - no):\*\*
+\- **Mean Difference (yes - no):**
 
 &nbsp;   
 
-&nbsp;   \*\*Mother:\*\* \*\*+0.22\*\* points
+&nbsp;   **Mother:** **+0.22** points
 
 &nbsp;   
 
-&nbsp;   \*\*Father:\*\* \*\*+0.36\*\* points
+&nbsp;   **Father:** **+0.36** points
 
 &nbsp;   
 
-&nbsp;   \*\*Other:\*\* \*\*-1.47 points\*\*
+&nbsp;   **Other:** **-1.47 points**
 
 &nbsp;   
 
-\- \*\*Insight:\*\*
+\- **Insight:**
 
 &nbsp;   
 
-&nbsp;   Students cared for by \*mother\* or \*father\* perform similarly well, with almost no difference in average grades. However, students whose primary guardian is listed as \*other\* score notably lower (–1.47), indicating a potential disadvantage.
+&nbsp;   Students cared for by *mother* or *father* perform similarly well, with almost no difference in average grades. However, students whose primary guardian is listed as *other* score notably lower (–1.47), indicating a potential disadvantage.
 
 &nbsp;   
 
 
 
-\## 6. Key Findings
+## 6. Key Findings
 
 
 
-\*\*Summary of Impact:\*\*
+**Summary of Impact:**
 
 
 
@@ -386,7 +386,7 @@ The six "Circle of Influence" factors showed only small differences in average g
 
 
 
-\*\*Positive Drivers:\*\*
+**Positive Drivers:**
 
 
 
@@ -394,7 +394,7 @@ The most consistent positive effects came from providing internet access, paid c
 
 
 
-\*\*Risk Factors:\*\*
+**Risk Factors:**
 
 
 
@@ -402,7 +402,7 @@ Students cared for by a guardian other than a parent scored noticeably lower, in
 
 
 
-\*\*Conclusion:\*\*
+**Conclusion:**
 
 
 
@@ -410,7 +410,7 @@ There is no one big fix—but small positive habits add up. Stable support, invo
 
 
 
-\## 7. Project Structure
+## 7. Project Structure
 
 
 
@@ -446,7 +446,7 @@ There is no one big fix—but small positive habits add up. Stable support, invo
 
 
 
-\## 8. How to Run This Project
+## 8. How to Run This Project
 
 
 
@@ -454,21 +454,21 @@ This project was developed and tested in a local Python environment using Jupyte
 
 
 
-\*\*Requirements\*\*
+**Requirements**
 
 
 
-\- Python \*\*3.10+\*\* (recommended)
+\- Python **3.10+** (recommended)
 
-\- Required libraries listed in \*\*requirements.txt\*\*
-
-
-
-\*\*Steps\*\*
+\- Required libraries listed in **requirements.txt**
 
 
 
-1\. \*\*Clone the repository:\*\*
+**Steps**
+
+
+
+1\. **Clone the repository:**
 
 &nbsp;   
 
@@ -476,7 +476,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   
 
-2\. \*\*Navigate to the project directory:\*\*
+2\. **Navigate to the project directory:**
 
 &nbsp;   
 
@@ -484,7 +484,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   
 
-3\. \*\*(Optional but recommended) Create a virtual environment:\*\*
+3\. **(Optional but recommended) Create a virtual environment:**
 
 &nbsp;   
 
@@ -496,7 +496,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   
 
-4\. \*\*Install dependencies:\*\*
+4\. **Install dependencies:**
 
 &nbsp;   
 
@@ -504,7 +504,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   
 
-5\. \*\*Launch Jupyter Notebook:\*\*
+5\. **Launch Jupyter Notebook:**
 
 &nbsp;   
 
@@ -512,7 +512,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   
 
-6\. Open \*\*student.ipynb\*\* and run the cells from top to bottom.
+6\. Open **student.ipynb** and run the cells from top to bottom.
 
 
 
@@ -520,7 +520,7 @@ All charts are automatically saved to the `charts/` directory.
 
 
 
-\## 9. Future Work
+## 9. Future Work
 
 
 
@@ -528,7 +528,7 @@ Possible future updates:
 
 
 
-\- \*\*SQL integration:\*\*
+\- **SQL integration:**
 
 &nbsp;   
 
@@ -536,7 +536,7 @@ Possible future updates:
 
 &nbsp;   
 
-\- \*\*Power BI dashboard\*\*
+\- **Power BI dashboard**
 
 &nbsp;   
 
@@ -544,7 +544,7 @@ Possible future updates:
 
 &nbsp;   
 
-\- \*\*Regression analysis:\*\*
+\- **Regression analysis:**
 
 &nbsp;   
 
@@ -552,7 +552,7 @@ Possible future updates:
 
 &nbsp;   
 
-\- \*\*Machine Learning model:\*\*
+\- **Machine Learning model:**
 
 &nbsp;   
 
