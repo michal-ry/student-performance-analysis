@@ -293,11 +293,11 @@ This project was developed and tested in a local Python environment using Jupyte
  
 &nbsp;   pip install -r requirements.txt  
 
-**5\. Launch Jupyter Notebook**   
+**4\. Launch Jupyter Notebook**   
 
 &nbsp;   jupyter notebook 
 
-**6\. Open student.ipynb** 
+**5\. Open student.ipynb** 
 
 &nbsp;   Run the cells from top to bottom.
 
