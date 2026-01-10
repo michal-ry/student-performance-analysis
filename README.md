@@ -132,7 +132,9 @@ To understand the overall performance of students, descriptive statistics were c
 
 **Visualization**
 
-![G3 Distribution](charts/g3\_distribution.png)
+<p align="center">
+  <img src="charts/g3_distribution.png" width="600">
+</p>
 
 A histogram of the final grades shows:
 
@@ -148,7 +150,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Nursery Attendance (Early Education)**
 
-![Average Grade by Nursery Attendance](charts/nursery.png)
+<p align="center">
+  <img src="charts/nursery.png" width="350">
+</p>
 
 \- **Correlation with 'G3':** **0.05** (Very Weak Positive).
 
@@ -158,7 +162,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Internet Access (Home Resources)**
 
-![Average Grade by Internet Access](charts/internet.png)
+<p align="center">
+  <img src="charts/internet.png" width="350">
+</p>
 
 \- **Correlation with 'G3':** **0.10** (Very Weak Positive)
 
@@ -168,7 +174,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Activities (Extra-Curricular Engagement)**
 
-![Average Grade by Extra Activities](charts/activities.png)
+<p align="center">
+  <img src="charts/activities.png" width="350">
+</p>
 
 \- **Correlation with 'G3':** **0.02** *(Very Weak Positive)*
 
@@ -178,7 +186,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Paid Classes (Extra Lessons)**
 
-![Average Grade by Paid Classes](charts/paid.png)
+<p align="center">
+  <img src="charts/paid.png" width="350">
+</p>
 
 \- **Correlation with G3:** **0.10** (Very weak positive)
 
@@ -188,7 +198,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Family Support**
 
-![Average Grade by Family Support](charts/famsup.png)
+<p align="center">
+  <img src="charts/famsup.png" width="350">
+</p>
 
 \- **Correlation with G3:** **–0.04** (Very Weak Negative)
 
@@ -198,7 +210,9 @@ This section examines individual parental factors to see how strongly they relat
 
 **Guardians**
 
-![Average Grade by Guardian Type](charts/guardians.png)
+<p align="center">
+  <img src="charts/guardians.png" width="800">
+</p>
 
 \- **Correlation with G3**   
 
