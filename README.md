@@ -14,7 +14,7 @@
 
 **\- Size:** 395 rows, 33 columns
 
-## Key Variable Analyzed
+### Key Variable Analyzed
 
 **Student grades**
 
@@ -324,10 +324,6 @@ Possible future updates:
 **\- SQL integration**
 
 &nbsp;   Recreate key analyses using SQL queries to demonstrate data extraction and aggregation skills. 
-
-**\- Power BI dashboard**
-
-&nbsp;   Create an interactive dashboard to present key findings dynamically, allowing users to explore how different Circle of Influence factors relate to student performance. 
 
 **\- Regression analysis** 
 
