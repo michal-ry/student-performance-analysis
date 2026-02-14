@@ -1,5 +1,10 @@
 # Parents' Circle of Influence
 
+## Current Development 
+
+The project is being extended with a SQL-based analysis module located in sql_analysis. 
+The goal is to replicate and expand the COI analysis using pure SQL before integrating it with the Python workflow.
+
 ## 1. Project Overview
 
 **Goal:** To identify which parental factors fall within the "Circle of Influence" and may influence their children's school performance.
