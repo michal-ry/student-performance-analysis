@@ -133,7 +133,7 @@ To understand the overall performance of students, descriptive statistics were c
 **Visualization**
 
 <p align="center">
-  <img src="charts/g3_distribution.png" width="600">
+  <img src="python_analysis/charts/g3_distribution.png" width="600">
 </p>
 
 A histogram of the final grades shows:
@@ -151,7 +151,7 @@ This section examines individual parental factors to see how strongly they relat
 **Nursery Attendance (Early Education)**
 
 <p align="center">
-  <img src="charts/nursery.png" width="350">
+  <img src="python_analysis/charts/nursery.png" width="350">
 </p>
 
 \- **Correlation with 'G3':** **0.05** (Very Weak Positive).
@@ -163,7 +163,7 @@ This section examines individual parental factors to see how strongly they relat
 **Internet Access (Home Resources)**
 
 <p align="center">
-  <img src="charts/internet.png" width="350">
+  <img src="python_analysis/charts/internet.png" width="350">
 </p>
 
 \- **Correlation with 'G3':** **0.10** (Very Weak Positive)
@@ -175,7 +175,7 @@ This section examines individual parental factors to see how strongly they relat
 **Activities (Extra-Curricular Engagement)**
 
 <p align="center">
-  <img src="charts/activities.png" width="350">
+  <img src="python_analysis/charts/activities.png" width="350">
 </p>
 
 \- **Correlation with 'G3':** **0.02** *(Very Weak Positive)*
@@ -187,7 +187,7 @@ This section examines individual parental factors to see how strongly they relat
 **Paid Classes (Extra Lessons)**
 
 <p align="center">
-  <img src="charts/paid.png" width="350">
+  <img src="python_analysis/charts/paid.png" width="350">
 </p>
 
 \- **Correlation with G3:** **0.10** (Very weak positive)
@@ -199,7 +199,7 @@ This section examines individual parental factors to see how strongly they relat
 **Family Support**
 
 <p align="center">
-  <img src="charts/famsup.png" width="350">
+  <img src="python_analysis/charts/famsup.png" width="350">
 </p>
 
 \- **Correlation with G3:** **–0.04** (Very Weak Negative)
@@ -211,7 +211,7 @@ This section examines individual parental factors to see how strongly they relat
 **Guardians**
 
 <p align="center">
-  <img src="charts/guardians.png" width="800">
+  <img src="python_analysis/charts/guardians.png" width="800">
 </p>
 
 \- **Correlation with G3**   
@@ -253,36 +253,30 @@ This section examines individual parental factors to see how strongly they relat
 
 ## 7. Project Structure
 
-├── student.ipynb                       
-
-├── student.csv                         
-
-├── charts/
-
-│   ├── g3\_distribution.png
-
-│   ├── nursery.png
-
-│   ├── internet.png
-
-│   ├── activities.png
-
-│   ├── paid.png
-
-│   ├── famsup.png
-
-│   ├── guardian\_mother.png
-
-│   ├── guardian\_father.png
-
-│   ├── guardian\_other.png
-
-│   ├── guardians.png
-
+```text
+student-performance-analysis/
 ├── README.md
-
 ├── requirements.txt
-
+│
+├── data/
+│   └── student.csv
+│
+├── python_analysis/
+│   ├── coi_analysis.ipynb
+│   └── charts/
+│       ├── g3_distribution.png
+│       ├── nursery.png
+│       ├── internet.png
+│       ├── activities.png
+│       ├── paid.png
+│       ├── famsup.png
+│       ├── guardian_mother.png
+│       ├── guardian_father.png
+│       ├── guardian_other.png
+│       ├── guardians.png
+│
+└── sql_analysis/
+```
 ## 8. How to Run This Project
 
 This project was developed and tested in a local Python environment using Jupyter Notebook.
@@ -315,7 +309,7 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   Run the cells from top to bottom.
 
-All charts are automatically saved to the `charts/` directory.
+All charts are automatically saved to the `python_analysis/charts/` directory.
 
 ## 9. Future Work
 
