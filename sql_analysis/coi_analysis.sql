@@ -39,3 +39,14 @@ SELECT
 *
 FROM coi
 LIMIT 5;
+
+-- ==========================
+-- G3 Descriptive Statistics
+-- ==========================
+
+SELECT
+COUNT(*) AS n_students,
+MIN(g3) AS lowest_grade,
+MAX(g3) AS highest_grade,
+ROUND(AVG(g3), 2) AS average_grade
+FROM coi;
