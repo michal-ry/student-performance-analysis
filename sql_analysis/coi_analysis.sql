@@ -11,6 +11,27 @@ SELECT *
 FROM student
 LIMIT 5;
 
+-- ===============================
+-- Data Quality Checks: Duplicates
+-- ===============================
+
+WITH total_rows AS(
+SELECT COUNT(*) AS total_rows_sum
+FROM student
+),
+unique_rows AS(
+SELECT COUNT(*) AS unique_rows_sum
+FROM (
+SELECT DISTINCT *
+FROM student
+) AS distinct_rows
+)
+SELECT
+t.total_rows_sum,
+u.unique_rows_sum,
+(t.total_rows_sum - u.unique_rows_sum) AS duplicate_rows
+FROM total_rows t, unique_rows u;
+
 -- ==========================
 -- Creating COI View
 -- ==========================
