@@ -40,6 +40,48 @@ SELECT
 FROM coi
 LIMIT 5;
 
+-- ================================
+-- Data Quality Checks: NULL counts
+-- ================================
+
+SELECT
+SUM(CASE
+	WHEN guardian IS NULL THEN 1
+	ELSE 0
+END
+) AS guardian_null_total,
+SUM(CASE
+	WHEN nursery IS NULL THEN 1
+	ELSE 0
+END
+) AS nursery_null_total,
+SUM(CASE
+	WHEN famsup IS NULL THEN 1
+	ELSE 0
+END
+) AS famsup_null_total,
+SUM(CASE
+	WHEN paid IS NULL THEN 1
+	ELSE 0
+END
+) AS paid_null_total,
+SUM(CASE
+	WHEN activities IS NULL THEN 1
+	ELSE 0
+END
+) AS activities_null_total,
+SUM(CASE
+	WHEN internet IS NULL THEN 1
+	ELSE 0
+END
+) AS internet_null_total,
+SUM(CASE
+	WHEN g3 IS NULL THEN 1
+	ELSE 0
+END
+) AS g3_null_total
+FROM coi
+
 -- ==========================
 -- G3 Descriptive Statistics
 -- ==========================
