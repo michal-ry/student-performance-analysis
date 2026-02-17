@@ -2,8 +2,8 @@
 
 ## Current Development 
 
-The project is being extended with a SQL-based analysis module located in sql_analysis. 
-The goal is to replicate and expand the COI analysis using pure SQL before integrating it with the Python workflow.
+The project now includes a SQL-based analysis module located in `sql_analysis/`, which reproduces the key COI analyses using database queries.
+The next step is integrating the SQLite database with the Python workflow so that analyses can be performed directly on SQL-prepared data.
 
 ## 1. Project Overview
 
@@ -55,11 +55,13 @@ These variables were selected because they represent factors fully controlled by
 
 ## 3. Tools \& Technologies
 
-**Language:** Python (3.11.5)
+**Language:** Python, SQL
 
-**Libraries:** Pandas, NumPy, Matplotlib
+**Database:** SQLite
 
-**Environment:** Jupyter Notebook
+**Python Libraries:** Pandas, Matplotlib
+
+**Environment:** Jupyter Notebook, DBeaver
 
 ## 4. Key Goals \& Insight
 
@@ -93,13 +95,20 @@ This included:
 
 \- verifying the presence of duplicate rows,
 
-\- checking for missing values across all columns,
+\- checking for missing values across all columns.
+
+The validation was performed in both the Python and SQL analysis  to ensure consistency across the two approaches.
 
 **Result:** The dataset contained no duplicates and no missing values, so no additional cleaning steps were required at this stage.
 
 **5.2 Feature Engineering \& Transformation**
 
-To prepare the dataset for statistical analysis and correlation testing, the following transformations were applied:
+The dataset preparation is divided into two stages: SQL-based feature selection and Python-based transformations.
+
+**SQL analytical view**
+
+&nbsp;   A dedicated SQL view (*coi*) was created to isolate the Circle of Influence features (guardian, nursery, famsup, paid, activities, internet) together with the target variable (G3).
+This view acts as a reproducible analytical dataset used for aggregation and comparison queries.
 
 **Column name formatting**
 
@@ -281,10 +290,14 @@ student-performance-analysis/
 │       ├── guardians.png
 │
 └── sql_analysis/
+    ├── db/
+    └── coi_analysis.sql
 ```
 ## 8. How to Run This Project
 
-This project was developed and tested in a local Python environment using Jupyter Notebook.
+This project contains two analysis layers: Python-based analysis and SQL-based analysis.
+
+### Python Analysis (Jupyter Notebook)
 
 **Requirements**
 
@@ -310,19 +323,44 @@ This project was developed and tested in a local Python environment using Jupyte
 
 &nbsp;   jupyter notebook 
 
-**5\. Open student.ipynb** 
+**5\. Open** `python_analysis/coi_analysis.ipynb` 
 
 &nbsp;   Run the cells from top to bottom.
 
 All charts are automatically saved to the `python_analysis/charts/` directory.
 
+### SQL Analysis (SQLite)
+
+The SQL module reproduces key parts of the analysis using database queries.
+
+**Steps**
+
+**1\.** Open DBeaver (or any SQLite-compatible client)
+
+**2\.** Create a new SQLite connection
+
+**3\.** Select database file: `sql_analysis/db/student.db`
+
+**4\.** Import dataset: `data/student.csv` into table named `student`
+
+**5\.** Open `sql_analysis/coi_analysis.sql`
+
+**6\.** Execute the script from top to bottom
+
+The script will:<br>
+&nbsp;   \- validate data quality<br>
+&nbsp;   \- create the `coi` analytical view<br>
+&nbsp;   \- compute descriptive statistics<br>
+&nbsp;   \- calculate COI feature comparisons
+
 ## 9. Future Work
 
 Possible future updates:
 
-**\- SQL integration**
+**\- SQL-Python integration**
 
-&nbsp;   Recreate key analyses using SQL queries to demonstrate data extraction and aggregation skills. 
+&nbsp;   Load analytical views from the SQLite database directly into Python to build a unified data pipeline (SQL for data preparation, Python for analysis and visualization).
+
 
 **\- Regression analysis** 
 
