@@ -369,3 +369,8 @@ Possible future updates:
 **\- Machine Learning model**  
 
 &nbsp;   Train a predictive model (e.g., linear regression or tree-based models) to estimate final grades (G3) using all features (prediction focus).
+
+## 10. Project Evolution
+
+&nbsp;   \- Python exploratory analysis and COI analysis<br>
+&nbsp;   \- SQL-based COI analysis (SQLite)<br>
