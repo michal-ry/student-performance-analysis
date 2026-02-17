@@ -119,7 +119,6 @@ FROM coi;
 -- ==========================
 
 -- Nursery
-
 SELECT
 nursery,
 COUNT(*) AS nr_of_students,
@@ -127,3 +126,12 @@ ROUND(AVG(g3), 2) AS avg_g3
 FROM coi
 GROUP BY nursery
 ORDER BY nursery;
+
+-- Internet
+SELECT
+internet,
+COUNT(*) AS nr_of_students,
+ROUND(AVG(g3), 2) AS avg_g3
+FROM coi
+GROUP BY internet
+ORDER BY internet;
