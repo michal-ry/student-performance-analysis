@@ -113,3 +113,17 @@ MIN(g3) AS lowest_grade,
 MAX(g3) AS highest_grade,
 ROUND(AVG(g3), 2) AS average_grade
 FROM coi;
+
+-- ==========================
+-- COI Analysis
+-- ==========================
+
+-- Nursery
+
+SELECT
+nursery,
+COUNT(*) AS nr_of_students,
+ROUND(AVG(g3), 2) AS avg_g3
+FROM coi
+GROUP BY nursery
+ORDER BY nursery;
