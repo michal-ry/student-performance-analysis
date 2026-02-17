@@ -162,3 +162,12 @@ ROUND(AVG(g3), 2) AS avg_g3
 FROM coi
 GROUP BY famsup
 ORDER BY famsup;
+
+-- Guardian
+SELECT
+guardian,
+COUNT(*) AS nr_of_students,
+ROUND(AVG(g3), 2) AS avg_g3
+FROM coi
+GROUP BY guardian
+ORDER BY avg_g3 DESC;
