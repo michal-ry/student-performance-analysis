@@ -144,3 +144,12 @@ ROUND(AVG(g3), 2) AS avg_g3
 FROM coi
 GROUP BY activities
 ORDER BY activities;
+
+-- Paid
+SELECT
+paid,
+COUNT(*) AS nr_of_students,
+ROUND(AVG(g3), 2) AS avg_g3
+FROM coi
+GROUP BY paid
+ORDER BY paid;
